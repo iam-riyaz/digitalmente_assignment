@@ -8,6 +8,7 @@ import { buildConfig } from 'payload/config'
 import {lexicalEditor } from '@payloadcms/richtext-lexical'
 
 import Users from './collections/Users'
+import Posts from './collections/Posts'
 
 export default buildConfig({
   admin: {
@@ -15,7 +16,7 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: lexicalEditor(),
-  collections: [Users],
+  collections: [Users,Posts],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
