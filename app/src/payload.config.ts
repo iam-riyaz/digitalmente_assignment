@@ -15,7 +15,7 @@ export default buildConfig({
     user: Users.slug,
     bundler: webpackBundler(),
   },
-  editor: lexicalEditor(),
+  editor: lexicalEditor({}),
   collections: [Users,Posts],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
